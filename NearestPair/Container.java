@@ -1,7 +1,6 @@
 
-//Don't change the class name
 public class Container{
-	private Point data;//Don't delete or change this field;
+	private Point data;
         private Link link;
 	
         public Container(Link link){
@@ -12,7 +11,7 @@ public class Container{
 	{
 		return link;
 	}
-	//Don't delete or change this function
+	
 	public Point getData()
 	{
 		return data;
