@@ -4,8 +4,6 @@ import java.util.Arrays;
 
 public class DataStructure implements DT {
 
-
-	//////////////// DON'T DELETE THIS CONSTRUCTOR ////////////////
 	public DataStructure()
 	{
 		Xfirst=null;
@@ -17,7 +15,6 @@ public class DataStructure implements DT {
 
 	@Override
 	public void addPoint(Point point) {
-            //Link(Point data, Link Xnext, Link Ynext, Link Xprev, Link Yprev)
             Comparator Xcomp=new XComperator();
             Comparator Ycomp=new YComperator();
             Link current, temp;
@@ -124,7 +121,6 @@ public class DataStructure implements DT {
 
 	@Override
 	public Point[] getPointsInRangeRegAxis(int min, int max, Boolean axis) {
-		// TODO Auto-generated method stub
                 Point[] parray=new Point[numOfPoints];
                 int i=0;
                 if(axis){//sorted by X
@@ -163,7 +159,6 @@ public class DataStructure implements DT {
 
 	@Override
 	public Point[] getPointsInRangeOppAxis(int min, int max, Boolean axis) {
-		// TODO Auto-generated method stub
 		Point[] parray=new Point[numOfPoints];
                 int i=0;
                 if(axis){//sorted by X
@@ -202,7 +197,6 @@ public class DataStructure implements DT {
 
 	@Override
 	public double getDensity() {
-		// TODO Auto-generated method stub
 		int maxX=Xlast.getData().getX();
                 int minX=Xfirst.getData().getX();
                 int maxY=Ylast.getData().getY();
@@ -212,7 +206,6 @@ public class DataStructure implements DT {
 
 	@Override
 	public void narrowRange(int min, int max, Boolean axis) {
-		// TODO Auto-generated method stub
                 Link linkBefore,linkAfter;
                 if(axis){//X axis
                     while(Xfirst!=null&&Xfirst.getData().getX()<min){
@@ -326,7 +319,6 @@ public class DataStructure implements DT {
 
 	@Override
 	public Boolean getLargestAxis() {
-		// TODO Auto-generated method stub
 		int maxX=Xlast.getData().getX();
                 int minX=Xfirst.getData().getX();
                 int maxY=Ylast.getData().getY();
@@ -336,7 +328,6 @@ public class DataStructure implements DT {
 
 	@Override
 	public Container getMedian(Boolean axis) {
-		// TODO Auto-generated method stub
 		int median=1+numOfPoints/2;
                 if(axis){//X Axis
                     Link current=Xfirst;
@@ -363,7 +354,6 @@ public class DataStructure implements DT {
 	@Override
 	public Point[] nearestPairInStrip(Container container, double width,
 			Boolean axis) {
-		// TODO Auto-generated method stub
                 double rightLimit,leftLimit;
                 Link right=container.getLink();
                 Link left=container.getLink();
@@ -436,7 +426,6 @@ public class DataStructure implements DT {
 
 	@Override
 	public Point[] nearestPair() {
-		// TODO Auto-generated method stub
                 Point[] output=new Point[2];
                 if(numOfPoints<2)
                     return output;
@@ -515,7 +504,6 @@ public class DataStructure implements DT {
 		return output+output2;
 	}
 	
-	//TODO: add members, methods, etc.
         private Link Xfirst;
         private Link Yfirst;
         private Link Xlast;
